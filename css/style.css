@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.containerLogoHeader {
+  max-width: 50px;
+}
+.headerLogo {
+  width: 100%;
+}
+.titleHeader {
+  margin-right: 5rem;
+  font-family: 'Salsa', cursive;
+  color: #552288;
+}
