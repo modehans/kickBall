@@ -2,18 +2,40 @@
   --primaryColor: #552288;
 }
 .header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-end;
+  padding: 2rem;
 }
 .containerLogoHeader {
   max-width: 50px;
+  grid-column: 1/2;
 }
 .headerLogo {
   width: 100%;
 }
 .titleHeader {
-  margin-right: 5rem;
+  grid-column: 2/3;
+  text-align: center;
+
   font-family: 'Salsa', cursive;
   color: var(--primaryColor);
+  -webkit-box-reflect: below 0 linear-gradient(transparent, white);
+}
+
+.footer {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__text {
+  color: var(--primaryColor);
+  font-family: 'Salsa', cursive;
+}
+
+.footer__list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
 }
