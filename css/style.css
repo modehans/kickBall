@@ -17,7 +17,7 @@
 .titleHeader {
   grid-column: 2/3;
   text-align: center;
-
+  font-size: 3rem;
   font-family: 'Salsa', cursive;
   color: var(--primaryColor);
   -webkit-box-reflect: below 0 linear-gradient(transparent, white);
