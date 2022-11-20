@@ -2,7 +2,7 @@
 
 Test your ball-busting skills.
 
-![App screenshot](/docsReadme/img/app.png)
+![App screenshot](/docsReadme/app.png)
 
 ## Stack 🛠️
 
