@@ -1,10 +1,12 @@
 # Kick Ball
 
 Test your ball-busting skills.
+
 Kick the balls and you'll get points:
-Normal ball 1 point
-Black ball -2 points
-Logo ball +3 points
+
+- Normal ball 1 point
+- Black ball -2 points
+- Logo ball +3 points
 
 ![App screenshot](/docsReadme/app.png)
 
