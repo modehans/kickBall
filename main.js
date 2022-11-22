@@ -58,5 +58,17 @@ const createBallPlus = () => {
   gameScreem.appendChild(ballPlus);
 };
 
+const createBallBlack = () => {
+  let ball = document.createElement('div');
+  ball.className = 'ball ballBlack';
+  ball.style.backgroundColor = 'rgb(0,0,0)';
+  ball.style.top = randomNum(20, 80) + '%';
+  ball.style.left = randomNum(10, 90) + '%';
+  ball.addEventListener('click', handleClickBall);
+  ball.addEventListener('animationend', finishAnimation);
+  gameScreem.appendChild(ball);
+};
+
 setInterval(createBall, 300);
+setInterval(createBallBlack, 500);
 setInterval(createBallPlus, randomNum(700, 1400));
