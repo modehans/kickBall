@@ -9,7 +9,7 @@ const randomNum = (min, max) => {
 };
 
 const upCounter = (ev) => {
-  if (ev.target.className === 'ballPlus') {
+  if (ev.target.className.includes('ballPlus')) {
     counter = counter + 3;
   } else if (ev.target.className.includes('ballBlack')) {
     counter = counter - 2;
@@ -52,7 +52,7 @@ const createBall = () => {
 
 const createBallPlus = () => {
   let ballPlus = document.createElement('div');
-  ballPlus.className = 'ballPlus';
+  ballPlus.className = 'ball ballPlus';
   ballPlus.style.top = randomNum(20, 80) + '%';
   ballPlus.style.left = randomNum(10, 90) + '%';
   ballPlus.addEventListener('click', handleClickBall);

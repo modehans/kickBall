@@ -90,14 +90,5 @@
 }
 
 .ballPlus {
-  position: absolute;
-  top: 10px;
-  left: 50px;
-  width: 50px;
-  height: 50px;
   background: url('../images/favicon.ico') no-repeat center;
-  animation-duration: 2s;
-  animation-name: blink;
-  cursor: pointer;
-  opacity: 0;
 }
