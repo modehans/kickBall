@@ -8,8 +8,12 @@ const randomNum = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min;
 };
 
-const upCounter = () => {
-  counter = counter + 1;
+const upCounter = (ev) => {
+  if (ev.target.className === 'ballPlus') {
+    counter = counter + 3;
+  } else {
+    counter = counter + 1;
+  }
   counterHtml.innerText = 'Puntos: ' + counter;
 };
 
@@ -22,7 +26,7 @@ const removeBall = (ev) => {
 };
 
 const handleClickBall = (ev) => {
-  upCounter();
+  upCounter(ev);
   removeBall(ev);
 };
 
@@ -47,7 +51,6 @@ const createBall = () => {
 };
 
 const createBallPlus = () => {
-  console.log('hola');
   let ballPlus = document.createElement('div');
   ballPlus.className = 'ballPlus';
   ballPlus.style.top = randomNum(20, 80) + '%';
@@ -58,4 +61,4 @@ const createBallPlus = () => {
 };
 
 setInterval(createBall, 300);
-setInterval(createBallPlus, randomNum(3000, 5000));
+setInterval(createBallPlus, randomNum(700, 1400));
