@@ -41,13 +41,10 @@ const createBall = () => {
     ',' +
     randomNum(0, 255) +
     ')';
-  console.log(ball.style.backgroundColor);
   ball.style.top = randomNum(20, 80) + '%';
   ball.style.left = randomNum(10, 90) + '%';
   ball.addEventListener('click', handleClickBall);
-  ball.addEventListener('animationend', function (ev) {
-    gameScreem.removeChild(ev.target);
-  });
+  ball.addEventListener('animationend', finishAnimation);
   gameScreem.appendChild(ball);
 };
 
