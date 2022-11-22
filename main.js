@@ -11,6 +11,8 @@ const randomNum = (min, max) => {
 const upCounter = (ev) => {
   if (ev.target.className === 'ballPlus') {
     counter = counter + 3;
+  } else if (ev.target.className.includes('ballBlack')) {
+    counter = counter - 2;
   } else {
     counter = counter + 1;
   }
@@ -61,6 +63,7 @@ const createBallPlus = () => {
 const createBallBlack = () => {
   let ball = document.createElement('div');
   ball.className = 'ball ballBlack';
+  console.log(ball.className);
   ball.style.backgroundColor = 'rgb(0,0,0)';
   ball.style.top = randomNum(20, 80) + '%';
   ball.style.left = randomNum(10, 90) + '%';
