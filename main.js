@@ -64,7 +64,6 @@ const createBallBlack = () => {
   let ball = document.createElement('div');
   ball.className = 'ball ballBlack';
   console.log(ball.className);
-  ball.style.backgroundColor = 'rgb(0,0,0)';
   ball.style.top = randomNum(20, 80) + '%';
   ball.style.left = randomNum(10, 90) + '%';
   ball.addEventListener('click', handleClickBall);
