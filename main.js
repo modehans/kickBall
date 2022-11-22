@@ -5,7 +5,7 @@ const counterHtml = document.querySelector('.js_counter');
 let counter = 0;
 
 const randomNum = (min, max) => {
-  return Math.floor(Math.random() * (max - min)) + min;
+  return ~~(Math.random() * (max + 1 - min)) + min;
 };
 
 const upCounter = (ev) => {
@@ -41,6 +41,7 @@ const createBall = () => {
     ',' +
     randomNum(0, 255) +
     ')';
+  console.log(ball.style.backgroundColor);
   ball.style.top = randomNum(20, 80) + '%';
   ball.style.left = randomNum(10, 90) + '%';
   ball.addEventListener('click', handleClickBall);
