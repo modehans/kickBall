@@ -50,7 +50,7 @@ const createBall = () => {
   gameScreem.appendChild(ball);
 };
 
-const createBallPlus = () => {
+const createPlusBall = () => {
   let ballPlus = document.createElement('div');
   ballPlus.className = 'ball ballPlus';
   ballPlus.style.top = randomNum(20, 80) + '%';
@@ -60,7 +60,7 @@ const createBallPlus = () => {
   gameScreem.appendChild(ballPlus);
 };
 
-const createBallBlack = () => {
+const createBlackBall = () => {
   let ball = document.createElement('div');
   ball.className = 'ball ballBlack';
   console.log(ball.className);
@@ -72,5 +72,5 @@ const createBallBlack = () => {
 };
 
 setInterval(createBall, 300);
-setInterval(createBallBlack, 500);
-setInterval(createBallPlus, randomNum(700, 1400));
+setInterval(createBlackBall, 500);
+setInterval(createPlusBall, randomNum(700, 1400));
