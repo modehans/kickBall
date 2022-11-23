@@ -34,6 +34,14 @@ const handleClickBall = (ev) => {
 
 const createBall = () => {
   let ball = document.createElement('div');
+  ball.style.top = randomNum(20, 80) + '%';
+  ball.style.left = randomNum(10, 90) + '%';
+  ball.addEventListener('click', handleClickBall);
+  ball.addEventListener('animationend', finishAnimation);
+  return ball;
+};
+const createStandarBall = () => {
+  let ball = createBall();
   ball.className = 'ball';
   ball.style.backgroundColor =
     'rgb(' +
@@ -43,34 +51,21 @@ const createBall = () => {
     ',' +
     randomNum(0, 255) +
     ')';
-  ball.style.top = randomNum(20, 80) + '%';
-  ball.style.left = randomNum(10, 90) + '%';
-  ball.addEventListener('click', handleClickBall);
-  ball.addEventListener('animationend', finishAnimation);
   gameScreem.appendChild(ball);
 };
 
 const createPlusBall = () => {
-  let ballPlus = document.createElement('div');
+  let ballPlus = createBall();
   ballPlus.className = 'ball ballPlus';
-  ballPlus.style.top = randomNum(20, 80) + '%';
-  ballPlus.style.left = randomNum(10, 90) + '%';
-  ballPlus.addEventListener('click', handleClickBall);
-  ballPlus.addEventListener('animationend', finishAnimation);
   gameScreem.appendChild(ballPlus);
 };
 
 const createBlackBall = () => {
-  let ball = document.createElement('div');
+  let ball = createBall();
   ball.className = 'ball ballBlack';
-  console.log(ball.className);
-  ball.style.top = randomNum(20, 80) + '%';
-  ball.style.left = randomNum(10, 90) + '%';
-  ball.addEventListener('click', handleClickBall);
-  ball.addEventListener('animationend', finishAnimation);
   gameScreem.appendChild(ball);
 };
 
-setInterval(createBall, 300);
+setInterval(createStandarBall, 300);
 setInterval(createBlackBall, 500);
 setInterval(createPlusBall, randomNum(700, 1400));
