@@ -19,10 +19,6 @@ const upCounter = (ev) => {
   counterHtml.innerText = 'Puntos: ' + counter;
 };
 
-const finishAnimation = (ev) => {
-  gameScreem.removeChild(ev.target);
-};
-
 const removeBall = (ev) => {
   gameScreem.removeChild(ev.target);
 };
@@ -37,7 +33,7 @@ const createBall = () => {
   ball.style.top = randomNum(20, 80) + '%';
   ball.style.left = randomNum(10, 90) + '%';
   ball.addEventListener('click', handleClickBall);
-  ball.addEventListener('animationend', finishAnimation);
+  ball.addEventListener('animationend', removeBall);
   return ball;
 };
 const createStandarBall = () => {
