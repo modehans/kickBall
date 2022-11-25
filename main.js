@@ -58,6 +58,7 @@ const createPlusBall = () => {
 
 const createBlackBall = () => {
   let ball = createBall();
+  ball.textContent='💀'
   ball.className = 'ball ballBlack';
   gameScreem.appendChild(ball);
 };
