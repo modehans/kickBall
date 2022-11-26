@@ -36,10 +36,10 @@ const ball = () => {
   ball.addEventListener('animationend', removeBall);
   return ball;
 };
-const createStandarBall = () => {
-  let standarBall = ball();
-  standarBall.className = 'ball';
-  standarBall.style.backgroundColor =
+const createStandardBall = () => {
+  let standardBall = ball();
+  standardBall.className = 'ball';
+  standardBall.style.backgroundColor =
     'rgb(' +
     randomNum(0, 255) +
     ',' +
@@ -47,7 +47,7 @@ const createStandarBall = () => {
     ',' +
     randomNum(0, 255) +
     ')';
-  gameScreen.appendChild(standarBall);
+  gameScreen.appendChild(standardBall);
 };
 
 const createPlusBall = () => {
@@ -63,6 +63,6 @@ const createBlackBall = () => {
   gameScreen.appendChild(blackBall);
 };
 
-setInterval(createStandarBall, 300);
+setInterval(createStandardBall, 300);
 setInterval(createBlackBall, 500);
 setInterval(createPlusBall, randomNum(700, 1400));
