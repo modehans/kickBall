@@ -37,9 +37,9 @@ const ball = () => {
   return ball;
 };
 const createStandarBall = () => {
-  let stanadarBall = ball();
-  stanadarBall.className = 'ball';
-  stanadarBall.style.backgroundColor =
+  let standarBall = ball();
+  standarBall.className = 'ball';
+  standarBall.style.backgroundColor =
     'rgb(' +
     randomNum(0, 255) +
     ',' +
@@ -47,7 +47,7 @@ const createStandarBall = () => {
     ',' +
     randomNum(0, 255) +
     ')';
-  gameScreem.appendChild(stanadarBall);
+  gameScreem.appendChild(standarBall);
 };
 
 const createPlusBall = () => {
