@@ -88,9 +88,11 @@
   }
 }
 
-.ballPlus {
+.plusBall {
   background: url('../images/favicon.ico') no-repeat center;
 }
-.ballBlack {
+.blackBall {
   background-color: black;
+  padding: 10px;
+  text-align: center;
 }
