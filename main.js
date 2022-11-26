@@ -9,9 +9,9 @@ const randomNum = (min, max) => {
 };
 
 const upCounter = (ev) => {
-  if (ev.target.className.includes('ballPlus')) {
+  if (ev.target.className.includes('plusBall')) {
     counter = counter + 3;
-  } else if (ev.target.className.includes('ballBlack')) {
+  } else if (ev.target.className.includes('blackBall')) {
     counter = counter - 2;
   } else {
     counter = counter + 1;
