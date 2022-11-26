@@ -1,6 +1,6 @@
 'use strict';
 
-const gameScreem = document.querySelector('.js_gameScreen');
+const gameScreen = document.querySelector('.js_gameScreen');
 const counterHtml = document.querySelector('.js_counter');
 let counter = 0;
 
@@ -20,7 +20,7 @@ const upCounter = (ev) => {
 };
 
 const removeBall = (ev) => {
-  gameScreem.removeChild(ev.target);
+  gameScreen.removeChild(ev.target);
 };
 
 const handleClickBall = (ev) => {
@@ -47,20 +47,20 @@ const createStandarBall = () => {
     ',' +
     randomNum(0, 255) +
     ')';
-  gameScreem.appendChild(standarBall);
+  gameScreen.appendChild(standarBall);
 };
 
 const createPlusBall = () => {
   let plusBall = ball();
   plusBall.className = 'ball plusBall';
-  gameScreem.appendChild(plusBall);
+  gameScreen.appendChild(plusBall);
 };
 
 const createBlackBall = () => {
   let blackBall = ball();
   blackBall.textContent = '💀';
   blackBall.className = 'ball blackBall';
-  gameScreem.appendChild(blackBall);
+  gameScreen.appendChild(blackBall);
 };
 
 setInterval(createStandarBall, 300);
