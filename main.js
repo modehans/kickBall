@@ -31,7 +31,7 @@ const handleClickBall = (ev) => {
 const ball = () => {
   let ball = document.createElement('div');
   ball.style.top = randomNum(20, 80) + '%';
-  ball.style.left = randomNum(10, 90) + '%';
+  ball.style.left = randomNum(0, 80) + '%';
   ball.addEventListener('click', handleClickBall);
   ball.addEventListener('animationend', removeBall);
   return ball;
